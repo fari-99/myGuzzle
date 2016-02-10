@@ -26,10 +26,8 @@ in your controller client
 ```php
 $data = [
   [
-      'id' => $data['id']
-  ],
-  [
       'namesANDcontents' => [
+          'id' => Input::get('id');
           'title' => Input::get('title'),
           'title1' => Input::get('title1'),
           'title2' => Input::get('title2'),
