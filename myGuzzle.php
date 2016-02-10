@@ -58,13 +58,9 @@ class myGuzzle{
 
 
 	public function multiPart($dataToPass, $request){
-		// print_r($dataToPass);
-		// echo "<br>" . $request;
-		$id = $dataToPass[0]['id'];
 		$multiPart = array();
-		$multiPart = $this->changeData($dataToPass[1]['namesANDcontents'], $multiPart);
-		$multiPart = $this->changeDataFiles($dataToPass[2]['namesANDcontentsFiles'], $multiPart);
-		// print_r($multiPart);
+		$multiPart = $this->changeData($dataToPass[0]['namesANDcontents'], $multiPart);
+		$multiPart = $this->changeDataFiles($dataToPass[1]['namesANDcontentsFiles'], $multiPart);
 		
 		$client = new GuzzleHttp\Client();
 		$response = $client->request($request, $this->controllerLocation, array(
