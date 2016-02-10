@@ -2,6 +2,8 @@
 is a php class for post request multipart or form_params from [GuzzleHttp] (https://github.com/guzzle/guzzle) package.
 
 #How To Use
+for laravel user, just copy this in your class custom library, don't forget to add that directory in `app/start/global.php`
+
 ##Form_params
 in your controller client
 
